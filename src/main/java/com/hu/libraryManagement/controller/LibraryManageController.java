@@ -1,6 +1,7 @@
 package com.hu.libraryManagement.controller;
 
 import com.hu.libraryManagement.VO.UserVO;
+import com.hu.libraryManagement.annotation.UserLoginToken;
 import com.hu.libraryManagement.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,7 +24,7 @@ public class LibraryManageController {
 
     @ApiOperation(value = "login", notes = "login")
     @PostMapping(value = "/login")
-    public boolean login(@RequestBody UserVO userVO){
+    public Object login(@RequestBody UserVO userVO){
         return userService.login(userVO);
     }
 
@@ -49,6 +50,12 @@ public class LibraryManageController {
     @PostMapping(value = "/redis3/{s}")
     public void redis3(@PathVariable String s){
         userService.redis3(s);
+    }
+
+    @UserLoginToken
+    @GetMapping("/getMessage")
+    public String getMessage() {
+        return "你已通过验证";
     }
 
 }
