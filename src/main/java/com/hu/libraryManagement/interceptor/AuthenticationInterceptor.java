@@ -1,4 +1,4 @@
-package com.hu.libraryManagement.service;
+package com.hu.libraryManagement.interceptor;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
@@ -8,6 +8,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.hu.libraryManagement.VO.UserVO;
 import com.hu.libraryManagement.annotation.PassToken;
 import com.hu.libraryManagement.annotation.UserLoginToken;
+import com.hu.libraryManagement.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Reference;
 import org.springframework.web.method.HandlerMethod;
@@ -95,4 +96,5 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                                 Object o, Exception e) throws Exception {
     }
 }
+
 

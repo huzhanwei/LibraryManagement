@@ -1,6 +1,6 @@
 package com.hu.libraryManagement.config;
 
-import com.hu.libraryManagement.service.AuthenticationInterceptor;
+import com.hu.libraryManagement.interceptor.AuthenticationInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
