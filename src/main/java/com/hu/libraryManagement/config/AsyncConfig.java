@@ -4,14 +4,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
 //线程池配置
-//查考 https://blog.csdn.net/m0_37701381/article/details/81072774
+//SpringBoot线程池配置 https://blog.csdn.net/m0_37701381/article/details/81072774
+//理解 ThreadPoolExecutor : https://blog.csdn.net/codertnt/article/details/78971506
+//线程池的四种创建： https://blog.csdn.net/vigoss77/article/details/81842199
 @Configuration
 @EnableAsync
 public class AsyncConfig {
