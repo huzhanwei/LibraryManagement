@@ -2,6 +2,7 @@ package com.hu.libraryManagement.controller;
 
 import com.hu.libraryManagement.VO.UserVO;
 import com.hu.libraryManagement.annotation.UserLoginToken;
+import com.hu.libraryManagement.service.AsyncService;
 import com.hu.libraryManagement.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -15,6 +16,9 @@ public class LibraryManageController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    AsyncService asyncService;
 
     @ApiOperation(value = "regiset",notes = "regiset")
     @PostMapping(value = "/regiset")
