@@ -11,7 +11,7 @@ public class UserVO implements Serializable {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(int userId) { // zhushi1
         this.userId = userId;
     }
 
